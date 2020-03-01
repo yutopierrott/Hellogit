@@ -13,15 +13,63 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/style.css">
 
+    <link href="https://vjs.zencdn.net/7.6.6/video-js.css" rel="stylesheet" />
+
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
     <script>
+        //グローバルメニューを下にスクロールしたら消す
+        var startPos = 0,
+            winScrollTop = 0;
+        $(window).on('scroll', function() {
+            winScrollTop = $(this).scrollTop();
+            if (winScrollTop >= startPos) {
+                $('.sote-header').addClass('hide');
+            } else {
+                $('.site-header').removeClass('hide');
+            }
+            startPos = winScrollTop;
+        })
     </script>
 
-    <div class="wrapper">
-        <video class="video" poster="" muted autoplay loop>
-        <source src="static/image/2396-1080.mp4" type="video/mp4">
+</head>
+
+<header class="site-header flex flex--bet">
+    <h1 class="site-logo">
+        <img class="site-logo_img" src="" alt="ロゴ">
+    </h1>
+
+    <nav class="gnav">
+        <ul class="gnav_menu flex flex--bet">
+            <li class="gnav_menu_item">
+                <a class="gnav_menu_item_link" href="">テスト</a>
+            </li>
+            <li class="gnav_menu_item">
+                <a class="gnav_menu_item_link" href="">テスト</a>
+            </li>
+            <li class="gnav_menu_item">
+                <a class="gnav_menu_item_link" href="">テスト</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<div class="wrapper">
+    <video class="video" poster="" muted loop autoplay>
+        <source src="static/image/2396-1080.mp4"  type="video/mp4" >
         </video>
 
-        <video class="video2" poster="" muted autoplay loop>
+    <video class="video2" poster="" muted autoplay loop>
         <source src="static/image/2131-1080.mp4" type="video/mp4">
         </video> >
-    </div>
+</div>
+
+<div class="wrapper2">
+
+    <p>テスト</p>
+    <p>テスト</p>
+    <p>テスト</p>
+    <p>テスト</p>
+    <p>テスト</p>
+</div>
