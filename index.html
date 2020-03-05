@@ -18,40 +18,51 @@
     <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 
     <script>
-        //グローバルメニューを下にスクロールしたら消す
+        //グローバルメニューを下にスクロールしたら出現させる
         var startPos = 0,
             winScrollTop = 0;
         $(window).on('scroll', function() {
             winScrollTop = $(this).scrollTop();
-            if (winScrollTop >= startPos) {
+            if (winScrollTop <= 100) {
                 $('.site-header').addClass('hide');
             } else {
                 $('.site-header').removeClass('hide');
             }
-            startPos = winScrollTop;
         })
     </script>
 
 </head>
 
 <header class="site-header flex flex--bet">
-    <h1 class="site-logo">
-        <img class="site-logo_img" src="" alt="ロゴ">
-    </h1>
-
-    <nav class="gnav">
+    <div class="headerPC-wrap">
+        <h1 class="site-logo">
+            <img class="site-logo_img" src="static/image/logo.png" alt="ロゴ">
+        </h1>
         <ul class="gnav_menu flex flex--bet">
             <li class="gnav_menu_item">
-                <a class="gnav_menu_item_link" href="">テスト</a>
-            </li>
-            <li class="gnav_menu_item">
-                <a class="gnav_menu_item_link" href="">テスト</a>
-            </li>
-            <li class="gnav_menu_item">
-                <a class="gnav_menu_item_link" href="">テスト</a>
+                <a class="gnav_menu_item_link" href="">TestBrand</a>
+                <div class="gnav_menu2">
+                    <div class="gnav_menuChild">
+                        <ul class="brandlist">
+                            <li><a href="">All ITEMS</a></li>
+                            <li><a href="">NEW</a></li>
+                        </ul>
+                        <ul class="clothlist">
+                            <li><a href="">OUTERWEAR</a></li>
+                            <li><a href="">PANTS</a></li>
+                            <li><a href="">TOPS/SWEATERS</a></li>
+                            <li><a href="">SHOES</a></li>
+                            <li><a href="">SWEATSHIRTS</a></li>
+                            <li><a href="">ACCESSORIES</a></li>
+                            <li><a href="">OTHERS</a></li>
+                            <li><a href="">T-SHIRTS</a></li>
+                            <li><a href="">SHIRTS</a></li>
+                        </ul>
+                    </div>
+                </div>
             </li>
         </ul>
-    </nav>
+    </div>
 </header>
 
 

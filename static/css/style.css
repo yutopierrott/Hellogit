@@ -1,20 +1,93 @@
 .site-header {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+    background: black;
+    padding-top: 0px;
+    padding-left: 20px;
     position: fixed;
     top: 0;
-    transition: .5s;
+    transition: 2s;
     width: 100%;
-    height: 40px;
-    z-index: 999;
+    height: 70px;
+    z-index: 1;
 }
 
-.site-header.hide {
-    transform: translate(-100%);
+.hide {
+    display: none;
+}
+
+.site-logo_img {
+    width: 70px;
+    height: 60px;
+    padding-top: 0px;
 }
 
 .gnav_menu {
-    display: flex;
+    bottom: 0px;
+    top: 20px;
+    left: 50%;
+    margin-left: -165px;
+    position: absolute;
+    width: 330px;
+}
+
+.gnav_menu_item {
+    left: 0%;
+}
+
+.gnav_menu_item_link {
+    color: white;
+    font-size: 29px;
+}
+
+.gnav_menu>li>div {
+    visibility: hidden;
+}
+
+.gnav_menu>li:hover>div {
+    visibility: visible;
+}
+
+.gnav_menu2 {
+    position: absolute;
+    top: 47px;
+    width: 480px;
+    left: 0;
+    box-sizing: border-box;
+    padding: 40px 0;
+    z-index: 0;
+}
+
+.gnav_menu2::after {
+    content: '';
+    background: rgba(31, 31, 31, .96);
+    width: 100%;
+    height: 250px;
+    display: block;
+    position: fixed;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+    transition: cubic-bezier(.25, .46, .45, .94);
+}
+
+.brandlist {
+    float: left;
+    display: block;
+    padding-left: 0px;
+    list-style: none;
+}
+
+.clothlist {
+    border-left: 1px solid #626262;
+    padding-left: 30px;
+    margin-left: 150px;
+    width: 340px;
+    z-index: 3;
+}
+
+.clothlist li {
+    float: left;
+    width: 50%;
+    list-style: none;
 }
 
 .wrapper {
