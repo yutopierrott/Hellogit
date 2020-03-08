@@ -55,6 +55,7 @@ body {
 
 .gnav_menu_item {
     left: 0%;
+    height: 50px;
 }
 
 .gnav_menu_item_link {
@@ -66,12 +67,8 @@ body {
     visibility: hidden;
 }
 
-.gnav_menu>li:hover>div {
-    visibility: visible;
-    background-color: rgba(31, 31, 31, .96);
-}
-
-.gnav_menu>li:hover>div::before {
+.gnav_menu>li:hover>div,
+.gnav_menu>li>div:hover {
     visibility: visible;
     background-color: rgba(31, 31, 31, .96);
 }
